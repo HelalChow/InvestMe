@@ -45,6 +45,8 @@
 	<string>Main</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app requires permission to use your location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app requires user location</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

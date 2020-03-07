@@ -17,6 +17,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     var animator: UIViewPropertyAnimator?
     
+    
     //Location Settings
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 30000
@@ -65,7 +66,7 @@ class MapViewController: UIViewController {
         case .authorizedAlways:
             break
         @unknown default:
-          print("fatal erroe unkown in case chk location")
+          print("fatal error unkown in case chk location")
       }
     }
     
@@ -109,8 +110,8 @@ class MapViewController: UIViewController {
 
         
         
-        mapView.addAnnotation(pinOne)
-        mapView.addAnnotation(pinTwo)
+//        mapView.addAnnotation(pinOne)
+//        mapView.addAnnotation(pinTwo)
         
 //        mapView.selectAnnotation(pinOne, animated: true)
 //        mapView.selectAnnotation(pinTwo, animated: true)
@@ -181,9 +182,11 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addAnnotations()
         createBottomView()
         checkLocationServices()
         mapView.delegate = self
+        
 
         let name = NSNotification.Name(rawValue: "BottomViewMoved")
         NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil, using: receiveNotification(_:))
@@ -228,6 +231,7 @@ extension MapViewController: CLLocationManagerDelegate {
               addAnnotations()
           }
           
+          
           currentCoordinate = latestLocation.coordinate
       }
       
@@ -256,7 +260,6 @@ extension MapViewController: CLLocationManagerDelegate {
 
 extension MapViewController: MKMapViewDelegate {
     
-   
     //add pin hover over diner
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -268,8 +271,7 @@ extension MapViewController: MKMapViewDelegate {
             let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
             
             pin.canShowCallout = true
-            
-            pin.image = UIImage(named: "marker")
+//            pin.image = UIImage(named: "marker")
             
             
             //the button when tapped goto gps
