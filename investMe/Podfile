@@ -6,5 +6,5 @@ target 'investMe' do
   use_frameworks!
 
   # Pods for investMe
-	
+   pod 'FlyoverKit'	
 end
