@@ -119,7 +119,7 @@ class MapViewController: UIViewController {
     //GPS ROUTE
      func showRoute() {
            let sourceLocation = currentCoordinate ?? CLLocationCoordinate2D(latitude: 40.692040, longitude: -73.9857)
-           let destinationLocation = CLLocationCoordinate2D(latitude: 40.714720, longitude: -73.991130)
+           let destinationLocation = CLLocationCoordinate2D(latitude: 40.7484, longitude: -73.9857)
            
            let sourcePlaceMark = MKPlacemark(coordinate: sourceLocation)
            let destinationPlaceMark = MKPlacemark(coordinate: destinationLocation)
@@ -182,7 +182,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addAnnotations()
-        createBottomView()
+//        createBottomView()
         checkLocationServices()
         mapView.delegate = self
         
@@ -267,6 +267,7 @@ extension MapViewController: MKMapViewDelegate {
             return nil
         }
         else{
+            
             let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
             
             pin.canShowCallout = true
@@ -281,6 +282,7 @@ extension MapViewController: MKMapViewDelegate {
     
     //segue to details vc
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        createBottomView()
         showRoute() //for destination gps
 //         let annView = view.annotation
 //
