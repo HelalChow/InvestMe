@@ -89,7 +89,6 @@ class MapViewController: UIViewController {
         empireStateAnnotation.title = markerTitle
         empireStateAnnotation.coordinate = CLLocationCoordinate2D(latitude: 40.7484, longitude: -73.9857)
        
-//HOLY COW DINER
         let brooklynBridge = MKPointAnnotation()
         brooklynBridge.title = markerTitle
         brooklynBridge.coordinate = CLLocationCoordinate2D(latitude: 40.714720, longitude: -73.991130)
@@ -271,7 +270,7 @@ extension MapViewController: MKMapViewDelegate {
             let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
             
             pin.canShowCallout = true
-//            pin.image = UIImage(named: "marker")
+//            pin.image = UIImage(named: "office_icon")
             
             
             //the button when tapped goto gps
@@ -299,7 +298,7 @@ extension MapViewController: MKMapViewDelegate {
     //color overlay over the geofences
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
          let renderer = MKPolylineRenderer(overlay: overlay)
-               renderer.strokeColor = UIColor.green
+               renderer.strokeColor = UIColor.blue
                renderer.lineWidth = 4.0
                return renderer
     }
