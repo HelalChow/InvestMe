@@ -64,7 +64,7 @@ class MapViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default))
             
-        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default))f
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default))
         
         self.present(alert, animated:true, completion: nil)
         
