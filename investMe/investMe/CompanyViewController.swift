@@ -16,9 +16,9 @@ class CompanyViewController: UIViewController, UIGestureRecognizerDelegate {
     
     
     
-    let closeThresholdHeight: CGFloat = 100
+    let closeThresholdHeight: CGFloat = 300
     let openThreshold: CGFloat = UIScreen.main.bounds.height - 200
-    let closeThreshold = UIScreen.main.bounds.height - 100 // same value as closeThresholdHeight
+    let closeThreshold = UIScreen.main.bounds.height - 300 // same value as closeThresholdHeight
     var panGestureRecognizer: UIPanGestureRecognizer?
     var animator: UIViewPropertyAnimator?
 
