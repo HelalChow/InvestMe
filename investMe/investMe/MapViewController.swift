@@ -25,6 +25,18 @@ class MapViewController: UIViewController {
     
     let markerTitle: String = "Get Directions"
     
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            addAnnotations()
+    //        createBottomView()
+            checkLocationServices()
+            mapView.delegate = self
+            
+
+            let name = NSNotification.Name(rawValue: "BottomViewMoved")
+            NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil, using: receiveNotification(_:))
+        }
+    
     
      func centerViewOnUserLocation() {
               if let location = locationManager.location?.coordinate {
@@ -190,17 +202,7 @@ class MapViewController: UIViewController {
     
     //MARK BOTTOM VIEW SEGUE HERE
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addAnnotations()
-//        createBottomView()
-        checkLocationServices()
-        mapView.delegate = self
-        
 
-        let name = NSNotification.Name(rawValue: "BottomViewMoved")
-        NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil, using: receiveNotification(_:))
-    }
     
     //alret notification
     @IBAction func alertButtonPressed(_ sender: Any) {
