@@ -12,7 +12,9 @@ import NotificationCenter
 
 class MapViewController: UIViewController {
 
-    @IBOutlet weak var mapView: UIView!
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
 
     var animator: UIViewPropertyAnimator?
 
