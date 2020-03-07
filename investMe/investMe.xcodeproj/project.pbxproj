@@ -15,8 +15,23 @@
 		1B3A928B24136F13008A6E87 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3A928A24136F13008A6E87 /* MapViewController.swift */; };
 		1B3A928D24136F5D008A6E87 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3A928C24136F5D008A6E87 /* CompanyViewController.swift */; };
 		1B3A92B32413BBC4008A6E87 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3A92B22413BBC4008A6E87 /* ProfileViewController.swift */; };
-		7EA41C0C60333D4514CB4059 /* Pods_investMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDC6E785D7609F9A67E6950 /* Pods_investMe.framework */; };
+		1B3A92B42413EBD2008A6E87 /* Pods_investMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDC6E785D7609F9A67E6950 /* Pods_investMe.framework */; };
+		1B3A92B52413EBD2008A6E87 /* Pods_investMe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDDC6E785D7609F9A67E6950 /* Pods_investMe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B3A92B62413EBD3008A6E87 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1B3A92B52413EBD2008A6E87 /* Pods_investMe.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1B3A927324136EA1008A6E87 /* investMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = investMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EA41C0C60333D4514CB4059 /* Pods_investMe.framework in Frameworks */,
+				1B3A92B42413EBD2008A6E87 /* Pods_investMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +123,7 @@
 				1B3A926F24136EA1008A6E87 /* Sources */,
 				1B3A927024136EA1008A6E87 /* Frameworks */,
 				1B3A927124136EA1008A6E87 /* Resources */,
+				1B3A92B62413EBD3008A6E87 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
