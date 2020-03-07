@@ -1,0 +1,6 @@
+framework module Pods_investMe {
+  umbrella header "Pods-investMe-umbrella.h"
+
+  export *
+  module * { export * }
+}

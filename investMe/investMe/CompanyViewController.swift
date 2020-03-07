@@ -8,6 +8,7 @@
 
 import UIKit
 import NotificationCenter
+import EventKit
 
 class CompanyViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -33,11 +34,11 @@ class CompanyViewController: UIViewController, UIGestureRecognizerDelegate {
         gestureRecognizer.delegate = self
         panGestureRecognizer = gestureRecognizer
         
-        let youtubeURL = "https://www.youtube.com/watch?v=Rg6GLVUnnpM"
+//        let youtubeURL = "https://www.youtube.com/watch?v=Rg6GLVUnnpM"
 //        video.allowsInlineMediaPlayback = true
 //        video.loadHTMLString("<iframe width=\"\(video.frame.width)\" height=\"\(video.frame.height)\" src=\"\(youtubeURL)?&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
         
-        getVideo(videoCode: "RmHqOSrkZnk")
+        getVideo(videoCode: "7Ueq-Tj9TJs")
     }
     
     //play video
@@ -110,4 +111,35 @@ class CompanyViewController: UIViewController, UIGestureRecognizerDelegate {
         let name = NSNotification.Name(rawValue: "BottomViewMoved")
         NotificationCenter.default.post(name: name, object: nil, userInfo: ["percentage": percentage])
     }
+    
+    @IBAction func meetingClicked(_ sender: Any) {
+        let eventStore:EKEventStore = EKEventStore()
+        
+        eventStore.requestAccess(to: .event) {(granted, error) in
+            if (granted) && (error) == nil
+            {
+                print("granted \(granted)")
+                print("error \(error)")
+                
+                let event:EKEvent = EKEvent(eventStore: eventStore)
+                event.title = "Investment Meeting EyeRide CEO"
+                event.startDate = Date()
+                event.endDate = Date()
+                event.notes = ""
+                event.calendar = eventStore.defaultCalendarForNewEvents
+                do {
+                    try eventStore.save(event, span: .thisEvent)
+                } catch let error as NSError{
+                    print("error : \(error)")
+                }
+                print("Save Event")
+            } else{
+                print("error : \(error)")
+            }
+            
+        }
+    }
+    
+    
+    
 }

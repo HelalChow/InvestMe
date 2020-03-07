@@ -7,24 +7,32 @@
 //
 
 import UIKit
+import SafariServices
 
 class ProfileViewController: UIViewController {
-
+    @IBOutlet weak var joinCall: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        joinCall.addTarget(self, action: Selector(("joinCallPressed")), for: .touchUpInside)
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func joinCallPressed(_ sender: Any) {
+        guard let url = URL(string: "https://hangouts.google.com/call/coYtJmhhuN5CMkLkdxlIAEEE") else {
+            return
+        }
+        let safariVC = SFSafariViewController(url: url)
+        present(safariVC, animated: true)
+        
+        
+//        if let url = NSURL(string: "https://hangouts.google.com/call/coYtJmhhuN5CMkLkdxlIAEEE") {
+//            UIApplication.shared.openURL(url as URL)
+        }
     }
-    */
+    
+    
 
-}
+

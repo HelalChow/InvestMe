@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vdi-Oc-ozV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OXU-Tv-Scn">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -7,6 +7,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="BV7-nS-ZaV">
+            <objects>
+                <viewController id="OXU-Tv-Scn" customClass="LoginViewController" customModule="investMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q46-ds-Rmd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-7r-EjY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YV7-7s-BXn">
+                                <rect key="frame" x="39" y="614" width="299" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="OXU-Tv-Scn" eventType="touchUpInside" id="hRO-G2-AuD"/>
+                                    <segue destination="Vdi-Oc-ozV" kind="presentation" modalPresentationStyle="fullScreen" id="XGN-tk-yTC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cLh-2N-8Wj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Wy-F1-73c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2306.4000000000001" y="136.69950738916256"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="O6X-L1-cnB">
             <objects>
@@ -17,15 +46,42 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Xta-9w-Bof"/>
-                        <segue destination="i3i-g5-Ezx" kind="relationship" relationship="viewControllers" id="JWs-ex-DBU"/>
+                        <segue destination="qdI-25-le2" kind="relationship" relationship="viewControllers" id="f0p-rL-Ilr"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="8lB-FK-pna"/>
+                        <segue destination="i3i-g5-Ezx" kind="relationship" relationship="viewControllers" id="CqN-QB-W5Z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzp-rK-jJ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-982" y="137"/>
+            <point key="canvasLocation" x="-1508" y="137"/>
         </scene>
-        <!--Item-->
+        <!--FeedViewController-->
+        <scene sceneID="W4n-u9-ZZ3">
+            <objects>
+                <viewController title="FeedViewController" id="qdI-25-le2" customClass="FeedViewController" customModule="investMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ws-t1-am0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feed Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ7-Tq-A7J">
+                                <rect key="frame" x="166" y="250" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pd7-uX-zyd"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Invest" image="dollarsign.circle" catalog="system" id="9XQ-S8-vWs"/>
+                    <navigationItem key="navigationItem" id="STL-Pi-5VK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPa-6n-ber" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-490" y="137"/>
+        </scene>
+        <!--Map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MapViewController" id="BYZ-38-t0r" customClass="MapViewController" customModule="investMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +94,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbG-ur-1bw">
-                                <rect key="frame" x="186" y="44" width="150" height="34"/>
+                                <rect key="frame" x="184" y="79" width="150" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Select A Location">
@@ -46,7 +102,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZU-w8-eNp">
-                                <rect key="frame" x="284" y="86" width="63" height="57"/>
+                                <rect key="frame" x="271" y="121" width="63" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="alertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jJL-QA-Vsl"/>
@@ -56,30 +112,44 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="mappin.and.ellipse" catalog="system" id="wVu-4J-BYI"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="wVu-4J-BYI"/>
                     <connections>
                         <outlet property="mapView" destination="Vnh-r5-aFE" id="eV5-rR-CAQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112.8" y="136.69950738916256"/>
+            <point key="canvasLocation" x="-1118" y="910"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="bNY-aY-T1l">
             <objects>
                 <viewController id="i3i-g5-Ezx" customClass="ProfileViewController" customModule="investMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6s8-gP-XGx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qja-HF-hbL">
+                                <rect key="frame" x="154" y="307" width="72" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Join Call"/>
+                                <connections>
+                                    <action selector="joinCallPressed:" destination="i3i-g5-Ezx" eventType="touchUpInside" id="2ut-BM-Kxy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JW9-6D-3J2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="person.circle" catalog="system" id="Hgh-Na-Cdd"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="Hgh-Na-Cdd"/>
+                    <connections>
+                        <outlet property="joinCall" destination="Qja-HF-hbL" id="UoB-Mc-rnH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gh0-Nt-Iky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="834"/>
+            <point key="canvasLocation" x="-2306" y="911"/>
         </scene>
         <!--Company View Controller-->
         <scene sceneID="ChV-eK-MkV">
@@ -89,11 +159,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="joa-7j-eUK">
-                                <rect key="frame" x="0.0" y="222" width="375" height="590"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-UA-2mz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -101,7 +166,6 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q3T-wS-XAg">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                     </view>
                                     <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tdp-rf-Zvb">
                                         <rect key="frame" x="36" y="46" width="303" height="155"/>
@@ -110,6 +174,15 @@
                                     </webView>
                                 </subviews>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFr-B2-qeL">
+                                <rect key="frame" x="37" y="287" width="160" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Schedule A Meeting"/>
+                                <connections>
+                                    <action selector="meetingClicked:" destination="r4N-QE-AUM" eventType="touchUpInside" id="bak-8Q-Chg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="77s-XO-D4N"/>
@@ -121,10 +194,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dbe-Af-8R3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1004" y="136.69950738916256"/>
+            <point key="canvasLocation" x="-268" y="910"/>
         </scene>
     </scenes>
     <resources>
+        <image name="dollarsign.circle" catalog="system" width="64" height="60"/>
+        <image name="login" width="250" height="541.33331298828125"/>
         <image name="mappin.and.ellipse" catalog="system" width="58" height="64"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
     </resources>
