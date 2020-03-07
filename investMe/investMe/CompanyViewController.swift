@@ -12,6 +12,8 @@ import NotificationCenter
 class CompanyViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var navBarView: UIView!
+    @IBOutlet weak var video: UIWebView!
+    
     
     
     let closeThresholdHeight: CGFloat = 100
@@ -30,6 +32,18 @@ class CompanyViewController: UIViewController, UIGestureRecognizerDelegate {
         view.addGestureRecognizer(gestureRecognizer)
         gestureRecognizer.delegate = self
         panGestureRecognizer = gestureRecognizer
+        
+        let youtubeURL = "https://www.youtube.com/watch?v=Rg6GLVUnnpM"
+        video.allowsInlineMediaPlayback = true
+//        video.loadHTMLString("<iframe width=\"\(video.frame.width)\" height=\"\(video.frame.height)\" src=\"\(youtubeURL)?&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
+        
+        getVideo(videoCode: "RmHqOSrkZnk")
+    }
+    
+    //play video
+    func getVideo(videoCode: String){
+        let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
+        video.loadRequest(URLRequest(url: url!))
     }
 
     func gotPanned(_ percentage: Int) {
