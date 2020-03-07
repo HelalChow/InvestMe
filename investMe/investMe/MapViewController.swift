@@ -100,6 +100,17 @@ class MapViewController: UIViewController {
         let jersey = MKPointAnnotation()
         jersey.title = markerTitle
         jersey.coordinate = CLLocationCoordinate2D(latitude: 40.7178, longitude: -74.0431)
+        
+        var geofenceList = [CLCircularRegion]()
+        let locations = [timesSqaureAnnotation.coordinate, empireStateAnnotation.coordinate, brooklynBridge.coordinate, prospectPark.coordinate, jersey.coordinate]
+        for coor in locations{
+            geofenceList.append(CLCircularRegion(center: coor, radius: 800, identifier: "geofence"))
+        }
+        for fence in geofenceList {
+            let circle = MKCircle(center: fence.center, radius: fence.radius)
+            circle.title = fence.identifier
+            mapView.addOverlay(circle)
+        }
        
         mapView.addAnnotation(timesSqaureAnnotation)
         mapView.addAnnotation(empireStateAnnotation)
@@ -258,22 +269,25 @@ extension MapViewController: CLLocationManagerDelegate {
   }
 
 extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+          guard let circleOverlay = overlay as? MKCircle else { return MKOverlayRenderer()}
+          let circleRenderer = MKCircleRenderer(circle: circleOverlay)
+          circleRenderer.strokeColor = .blue
+          circleRenderer.fillColor = .blue
+          circleRenderer.alpha = 0.3
+          return circleRenderer
+    }
     
-    //add pin hover over diner
+    //add pin hover
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
         if annotation is MKUserLocation {
             //we dont want to do anything because of this is the blue dot we want only custom pins
             return nil
         }
         else{
-            
             let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
-            
             pin.canShowCallout = true
 //            pin.image = UIImage(named: "office_icon")
-            
-            
             //the button when tapped goto gps
             pin.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             return pin
@@ -298,10 +312,10 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     //color overlay over the geofences
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-         let renderer = MKPolylineRenderer(overlay: overlay)
-               renderer.strokeColor = UIColor.blue
-               renderer.lineWidth = 4.0
-               return renderer
-    }
+//    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+//         let renderer = MKPolylineRenderer(overlay: overlay)
+//               renderer.strokeColor = UIColor.blue
+//               renderer.lineWidth = 4.0
+//               return renderer
+//    }
 }
