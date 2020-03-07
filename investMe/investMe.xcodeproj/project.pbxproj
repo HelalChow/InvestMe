@@ -18,6 +18,7 @@
 		1B3A92B42413EBD2008A6E87 /* Pods_investMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDC6E785D7609F9A67E6950 /* Pods_investMe.framework */; };
 		1B3A92B52413EBD2008A6E87 /* Pods_investMe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDDC6E785D7609F9A67E6950 /* Pods_investMe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1B3A92B82413F56B008A6E87 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3A92B72413F56B008A6E87 /* LoginViewController.swift */; };
+		1B3A92BA24141325008A6E87 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3A92B924141325008A6E87 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,7 @@
 		1B3A928C24136F5D008A6E87 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		1B3A92B22413BBC4008A6E87 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1B3A92B72413F56B008A6E87 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1B3A92B924141325008A6E87 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		386840A9BA89A06357F30DD3 /* Pods-investMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-investMe.release.xcconfig"; path = "Target Support Files/Pods-investMe/Pods-investMe.release.xcconfig"; sourceTree = "<group>"; };
 		B75FBA39FE2A78C11EF83E4F /* Pods-investMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-investMe.debug.xcconfig"; path = "Target Support Files/Pods-investMe/Pods-investMe.debug.xcconfig"; sourceTree = "<group>"; };
 		EDDC6E785D7609F9A67E6950 /* Pods_investMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_investMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,7 @@
 				1B3A928C24136F5D008A6E87 /* CompanyViewController.swift */,
 				1B3A92B22413BBC4008A6E87 /* ProfileViewController.swift */,
 				1B3A92B72413F56B008A6E87 /* LoginViewController.swift */,
+				1B3A92B924141325008A6E87 /* FeedViewController.swift */,
 			);
 			path = investMe;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				1B3A92B32413BBC4008A6E87 /* ProfileViewController.swift in Sources */,
 				1B3A927924136EA1008A6E87 /* SceneDelegate.swift in Sources */,
 				1B3A928B24136F13008A6E87 /* MapViewController.swift in Sources */,
+				1B3A92BA24141325008A6E87 /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

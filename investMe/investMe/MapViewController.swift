@@ -241,7 +241,7 @@ extension MapViewController: CLLocationManagerDelegate {
     
     //GEOFENCES
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-    print("entrer")
+    print("centrer")
     }
      
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
