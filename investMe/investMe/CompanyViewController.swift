@@ -34,7 +34,7 @@ class CompanyViewController: UIViewController, UIGestureRecognizerDelegate {
         panGestureRecognizer = gestureRecognizer
         
         let youtubeURL = "https://www.youtube.com/watch?v=Rg6GLVUnnpM"
-        video.allowsInlineMediaPlayback = true
+//        video.allowsInlineMediaPlayback = true
 //        video.loadHTMLString("<iframe width=\"\(video.frame.width)\" height=\"\(video.frame.height)\" src=\"\(youtubeURL)?&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
         
         getVideo(videoCode: "RmHqOSrkZnk")

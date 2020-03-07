@@ -14,6 +14,7 @@
 		1B3A928324136EA3008A6E87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B3A928124136EA3008A6E87 /* LaunchScreen.storyboard */; };
 		1B3A928B24136F13008A6E87 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3A928A24136F13008A6E87 /* MapViewController.swift */; };
 		1B3A928D24136F5D008A6E87 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3A928C24136F5D008A6E87 /* CompanyViewController.swift */; };
+		1B3A92B32413BBC4008A6E87 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3A92B22413BBC4008A6E87 /* ProfileViewController.swift */; };
 		7EA41C0C60333D4514CB4059 /* Pods_investMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDC6E785D7609F9A67E6950 /* Pods_investMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		1B3A928424136EA3008A6E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B3A928A24136F13008A6E87 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1B3A928C24136F5D008A6E87 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
+		1B3A92B22413BBC4008A6E87 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		386840A9BA89A06357F30DD3 /* Pods-investMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-investMe.release.xcconfig"; path = "Target Support Files/Pods-investMe/Pods-investMe.release.xcconfig"; sourceTree = "<group>"; };
 		B75FBA39FE2A78C11EF83E4F /* Pods-investMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-investMe.debug.xcconfig"; path = "Target Support Files/Pods-investMe/Pods-investMe.debug.xcconfig"; sourceTree = "<group>"; };
 		EDDC6E785D7609F9A67E6950 /* Pods_investMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_investMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 				1B3A928424136EA3008A6E87 /* Info.plist */,
 				1B3A928A24136F13008A6E87 /* MapViewController.swift */,
 				1B3A928C24136F5D008A6E87 /* CompanyViewController.swift */,
+				1B3A92B22413BBC4008A6E87 /* ProfileViewController.swift */,
 			);
 			path = investMe;
 			sourceTree = "<group>";
@@ -91,7 +94,6 @@
 				B75FBA39FE2A78C11EF83E4F /* Pods-investMe.debug.xcconfig */,
 				386840A9BA89A06357F30DD3 /* Pods-investMe.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -194,6 +196,7 @@
 			files = (
 				1B3A928D24136F5D008A6E87 /* CompanyViewController.swift in Sources */,
 				1B3A927724136EA1008A6E87 /* AppDelegate.swift in Sources */,
+				1B3A92B32413BBC4008A6E87 /* ProfileViewController.swift in Sources */,
 				1B3A927924136EA1008A6E87 /* SceneDelegate.swift in Sources */,
 				1B3A928B24136F13008A6E87 /* MapViewController.swift in Sources */,
 			);

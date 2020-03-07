@@ -52,5 +52,22 @@ class MapViewController: UIViewController {
         let name = NSNotification.Name(rawValue: "BottomViewMoved")
         NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil, using: receiveNotification(_:))
     }
+    
+    //alret notification
+    @IBAction func alertButtonPressed(_ sender: Any) {
+        createAlert(title: "A new startup near you is looking for investors", message: "Are you looking to invest?")
+    }
+    
+    
+    func createAlert (title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default))
+            
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default))f
+        
+        self.present(alert, animated:true, completion: nil)
+        
+    }
 }
 
