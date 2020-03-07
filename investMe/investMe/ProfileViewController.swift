@@ -10,9 +10,12 @@ import UIKit
 import SafariServices
 
 class ProfileViewController: UIViewController {
-
+    @IBOutlet weak var joinCall: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        joinCall.addTarget(self, action: Selector(("joinCallPressed")), for: .touchUpInside)
 
         // Do any additional setup after loading the view.
     }
@@ -23,8 +26,13 @@ class ProfileViewController: UIViewController {
         }
         let safariVC = SFSafariViewController(url: url)
         present(safariVC, animated: true)
+        
+        
+//        if let url = NSURL(string: "https://hangouts.google.com/call/coYtJmhhuN5CMkLkdxlIAEEE") {
+//            UIApplication.shared.openURL(url as URL)
+        }
     }
     
     
 
-}
+
